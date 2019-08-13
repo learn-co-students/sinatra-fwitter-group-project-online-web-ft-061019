@@ -1,0 +1,9 @@
+
+<h2>Welcome, This page will show all the tweets here</h2>
+<ul>
+<% if !@tweets.empty? %>
+   <% @tweets.each do |tweet| %>
+     <li><%= tweet.content %></li>
+   <% end %>
+<% end %>
+</ul>

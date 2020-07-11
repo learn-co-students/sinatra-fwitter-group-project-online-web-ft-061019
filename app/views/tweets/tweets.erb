@@ -1,0 +1,12 @@
+<h1>Welcome <%= (@user.username).capitalize %></h1>
+<h4>Recent Tweets</h4>
+
+
+  <% @tweets.each do |tweet| %>
+    <p><li><strong><%= tweet.title %></strong></p>
+    <p><%= tweet.content %></p>
+    <p><a href="/tweets/<%= tweet.id %>/edit">Update or Delete Your Tweet!</a></li><br>
+    </p>
+  <% end %>  <br><br>
+
+<a href="/tweets/new">Create a Tweet!</a>

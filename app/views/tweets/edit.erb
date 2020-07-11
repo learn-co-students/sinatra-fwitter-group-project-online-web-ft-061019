@@ -1,0 +1,16 @@
+<h1>Want To Change Something?</h1>
+
+  <form method="post" action="/tweets/<%=@tweet.id%>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <label for "name">Title: </label>
+    <input type="text" id="title" name="title" value="<%= @tweet.title %>">
+
+    <label for "name">Content: </label>
+    <input type="text" id="content" name="content" value="<%= @tweet.content %>"><br><br>
+    <input type="submit" value="SUBMIT">
+  </form> 
+
+  <form method="post" action="/tweets/<%= @tweet.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="DELETE">
+</form><br>
